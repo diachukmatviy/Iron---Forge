@@ -1,0 +1,134 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  text-shadow: #080808 0px 0px 1px;
+  transition:
+    background 0.3s ease,
+    border-bottom 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(8, 8, 8, 0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(200, 241, 53, 0.1);
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 900;
+  font-size: 1.2rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #c8f135;
+  text-decoration: none;
+}
+
+/* Desktop nav */
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navLink {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: #ffffff;
+}
+
+.navCta {
+  padding: 10px 20px;
+  background: #c8f135;
+  color: #080808;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 900;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+  transition: transform 0.2s ease;
+}
+
+.navCta:hover {
+  transform: scale(1.04);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Mobile menu */
+.mobileMenu {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  padding: 8px 24px 24px;
+  background: rgba(8, 8, 8, 0.98);
+}
+
+.mobileMenu.open {
+  display: flex;
+}
+
+.mobileLink {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+.mobileCta {
+  margin-top: 8px;
+  padding: 14px;
+  text-align: center;
+  background: #c8f135;
+  color: #080808;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 900;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .desktopNav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
